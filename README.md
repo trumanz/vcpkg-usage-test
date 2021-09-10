@@ -1,0 +1,1 @@
+# vcpkg-usage-test
