@@ -12,12 +12,14 @@ pool:
 steps:
 - script: |
      git clone https://github.com/Microsoft/vcpkg.git
+     cd vcpkg && git checkout 2021.05.12 && cd ../
      ./vcpkg/bootstrap-vcpkg.sh
-     export VCPKG_HOME=$(pwd)/vcpkg
-     export PATH=$PATH:$(pwd)/vcpkg
+     echo "export VCPKG_HOME=$(pwd)/vcpkg" >>  vcpkg.env
+     echo "export PATH=$PATH:$(pwd)/vcpkg" >>  vcpkg.env
   displayName: 'Install vcpkg'
 
 - script: |
+    source ./vcpkg.env
     echo $PATH
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
