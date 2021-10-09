@@ -10,10 +10,15 @@ pool:
   vmImage: ubuntu-20.04
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+- script: |
+     git clone https://github.com/Microsoft/vcpkg.git
+     ./vcpkg/bootstrap-vcpkg.sh
+     export VCPKG_HOME=$(pwd)/vcpkg
+     export PATH=$PATH:$(pwd)/vcpkg
+  displayName: 'Install vcpkg'
 
 - script: |
+    echo $PATH
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'

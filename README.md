@@ -1,5 +1,8 @@
 # vcpkg-usage-test
 
+[![azure-pipeline](https://dev.azure.com/trumanckzhou/trumanckzhou/_apis/build/status/trumanz.vcpkg-usage-test?branchName=main)](https://dev.azure.com/trumanckzhou/trumanckzhou/_build/latest?definitionId=8&branchName=main)
+
+
 # install vcpkg
 
 https://vcpkg.io/en/getting-started.html
