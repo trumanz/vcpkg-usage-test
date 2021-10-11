@@ -19,6 +19,7 @@ steps:
   displayName: 'Install vcpkg'
 
 - script: |
+    cat ./vcpkg.env
     source ./vcpkg.env
     echo $PATH
     cmake --version
